@@ -1,4 +1,5 @@
 import {
+  IRouter,
   JupyterFrontEnd,
   JupyterFrontEndPlugin
 } from '@jupyterlab/application';
@@ -9,8 +10,15 @@ import {
 const plugin: JupyterFrontEndPlugin<void> = {
   id: 'jupyterlab-reset-fixer:plugin',
   autoStart: true,
-  activate: (app: JupyterFrontEnd) => {
+  requires: [IRouter],
+  activate: (app: JupyterFrontEnd, router: IRouter) => {
     console.log('JupyterLab extension jupyterlab-reset-fixer is activated!');
+
+    router.register({
+      command: 'apputils:reset-on-load',
+      pattern: /(\?reset|\&reset)(=?)($|&)/,
+      rank: 20 // High priority: 20:100.
+    });
   }
 };
 

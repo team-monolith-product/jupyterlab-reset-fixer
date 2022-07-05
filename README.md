@@ -1,7 +1,9 @@
 # jupyterlab_reset_fixer
 
 [![Github Actions Status](https://github.com/team-monolith-product/jupyterlab-reset-fixer/workflows/Build/badge.svg)](https://github.com/team-monolith-product/jupyterlab-reset-fixer/actions/workflows/build.yml)
-fixes regex pattern for reset-on-load command.
+IT fixes regex pattern for reset-on-load command. `reset=` also triggers workspace reset.
+
+
 
 ## Requirements
 
