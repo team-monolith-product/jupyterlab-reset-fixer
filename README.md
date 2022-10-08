@@ -1,13 +1,19 @@
 # jupyterlab_reset_fixer
 
-[![Github Actions Status](https://github.com/team-monolith-product/jupyterlab-reset-fixer/workflows/Build/badge.svg)](https://github.com/team-monolith-product/jupyterlab-reset-fixer/actions/workflows/build.yml)
-IT fixes regex pattern for reset-on-load command. `reset=` also triggers workspace reset.
-
+It fixes regex pattern for reset-on-load command. `reset=` also triggers workspace reset.
 
 
 ## Requirements
 
+### 0.\*.\*
+
 - JupyterLab >= 3.0
+
+### 1.\*.\*
+
+- JupyterLab >= 4.0
+
+1.* versions are developed and tested with JupyterLab 4.0.0a29.
 
 ## Install
 
@@ -26,6 +32,13 @@ pip uninstall jupyterlab_reset_fixer
 ```
 
 ## Contributing
+
+### Creating Conda Environment
+
+For `0.*.*` versions,
+```
+conda create -n jupyterlab-ext --override-channels --strict-channel-priority -c conda-forge -c nodefaults jupyterlab=3 cookiecutter nodejs jupyter-packaging git
+```
 
 ### Development install
 
