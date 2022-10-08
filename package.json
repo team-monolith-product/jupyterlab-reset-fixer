@@ -1,6 +1,6 @@
 {
   "name": "jupyterlab-reset-fixer",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "fixes regex pattern for reset-on-load command.",
   "keywords": [
     "jupyter",
