@@ -16,7 +16,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
 
     router.register({
       command: 'apputils:reset-on-load',
-      pattern: /(\?reset|\&reset)(=?)($|&)/,
+      pattern: /(\?reset|\&reset)=($|&)/,
       rank: 20 // High priority: 20:100.
     });
   }
